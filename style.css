@@ -13,6 +13,10 @@ body {
   margin: auto;
 }
 
+section {
+  font-family: Ubuntu;
+}
+
 /* Menu */
 
 .menu {
@@ -193,7 +197,7 @@ main h1 {
   margin: 0;
 }
 
-/* Careousel */
+/* Carousel */
 
 .tech-box {
   display: flex;
@@ -201,13 +205,6 @@ main h1 {
   align-items: center;
   gap: 25px;
 }
-
-/* .tech-box img {
-  border-radius: 5px;
-  padding: 5px;
-  border: 1px solid black;
-  width: 50px;
-} */
 
 .tech-image {
   display: flex;
@@ -262,6 +259,16 @@ main h1 {
   opacity: 100%;
 }
 
+.carousel {
+  margin-bottom: 25px;
+}
+
+.carousel h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
 .carousel-wrapper {
   overflow-x: hidden;
   position: relative;
@@ -289,6 +296,7 @@ main h1 {
     rgba(0, 0, 0, 0) 95%,
     rgba(255, 255, 255, 1) 100%
   );
+  pointer-events: none;
 }
 
 .carousel-container:hover {
@@ -300,14 +308,16 @@ main h1 {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-1483px);
+    transform: translateX(-1479px);
   }
 }
 
 /* Section 1 */
 
-.first-section {
-  background-color: #fff;
+.first-section > h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .projects-container {
@@ -323,6 +333,8 @@ main h1 {
   width: 300px;
   overflow: hidden;
   position: relative;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .project-img {
@@ -391,8 +403,71 @@ main h1 {
 
 /* Section 2 */
 
-.second-section {
-  background-color: rgb(255, 203, 203);
+.second-section > h1 {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.expirience-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.expirience-header h2,
+.expirience-container-forth h2 {
+  margin: 0;
+}
+
+.expirience-header img {
+  height: 32px;
+}
+
+.expirience-container {
+  margin-bottom: 20px;
+}
+
+.expirience-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.expirience-container-second,
+.expirience-container-forth {
+  border: 1px solid black;
+  border-radius: 5px;
+  display: inline-block;
+  width: fit-content;
+  align-self: flex-end;
+  padding: 35px;
+}
+
+.expirience-container-first,
+.expirience-container-third {
+  border: 1px solid black;
+  border-radius: 5px;
+  display: inline-block;
+  width: fit-content;
+  padding: 35px;
+}
+
+.expirience-container-second .expirience-header {
+  direction: rtl;
+}
+
+.expirience-container-second .expirience-header + p {
+  direction: rtl;
+}
+
+.expirience-container-forth {
+  direction: rtl;
+}
+
+.expirience-container-forth + p {
+  direction: rtl;
 }
 
 /* First animation */
