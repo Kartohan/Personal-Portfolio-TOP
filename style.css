@@ -1,7 +1,8 @@
 body {
   padding: 0;
   margin: 0;
-  background: rgb(180, 180, 180);
+  background-color: #ffebea;
+  background-image: linear-gradient(19deg, #ffebea 0%, #ddd6f3 100%);
 }
 
 .container {
@@ -45,7 +46,12 @@ section {
   text-decoration: none;
   margin: 0;
   padding: 0;
-  color: white;
+  color: black;
+  transition-duration: 0.5s;
+}
+
+.menu-items a:hover {
+  color: rgb(96, 96, 255);
 }
 
 #nav-toggle {
@@ -289,13 +295,13 @@ main h1 {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 1) 0%,
     rgba(0, 0, 0, 0) 5%,
     rgba(0, 0, 0, 0) 95%,
     rgba(255, 255, 255, 1) 100%
-  );
+  ); */
   pointer-events: none;
 }
 
@@ -314,14 +320,17 @@ main h1 {
 
 /* Section 1 */
 
+.first-section {
+  margin-bottom: 25px;
+}
+
 .first-section > h1 {
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .projects-container {
-  padding: 25px;
   display: flex;
   gap: 25px;
   justify-content: center;
@@ -334,7 +343,6 @@ main h1 {
   overflow: hidden;
   position: relative;
   border: 1px solid black;
-  border-radius: 5px;
 }
 
 .project-img {
@@ -403,6 +411,10 @@ main h1 {
 
 /* Section 2 */
 
+.second-section {
+  margin-bottom: 25px;
+}
+
 .second-section > h1 {
   margin-bottom: 25px;
   text-align: center;
@@ -438,7 +450,6 @@ main h1 {
 .expirience-container-second,
 .expirience-container-forth {
   border: 1px solid black;
-  border-radius: 5px;
   display: inline-block;
   width: fit-content;
   align-self: flex-end;
@@ -448,7 +459,6 @@ main h1 {
 .expirience-container-first,
 .expirience-container-third {
   border: 1px solid black;
-  border-radius: 5px;
   display: inline-block;
   width: fit-content;
   padding: 35px;
@@ -468,6 +478,68 @@ main h1 {
 
 .expirience-container-forth + p {
   direction: rtl;
+}
+
+/* Third section */
+
+.third-section {
+  margin-bottom: 10px;
+}
+
+.third-section > h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.third-section p {
+  font-size: 1.1rem;
+  line-height: 25px;
+}
+
+/* Contact */
+
+.fourth-section {
+  margin-bottom: 50px;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-right,
+.contact-left {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.contact-right {
+  align-items: flex-end;
+}
+
+.contact-container {
+  height: 30px;
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
+  gap: 5px;
+}
+
+.contact-container img {
+  height: 100%;
+}
+
+.contact-container a {
+  color: blue;
+  text-decoration: none;
+}
+
+.fourth-section > h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 35px;
 }
 
 /* First animation */
