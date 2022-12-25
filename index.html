@@ -5,20 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
+    <script src="index.js" defer></script>
     <title>Document</title>
   </head>
   <body>
     <div class="ani">
       <h1 class="a-text">Hello!</h1>
     </div>
-    <div class="container">
+    <div id="home" class="container">
       <nav class="menu">
         <input type="checkbox" id="nav-toggle" />
-        <div>Logo</div>
+        <div class="logo">
+          <a href="#home"></a>
+        </div>
         <ul class="menu-items">
-          <li><a href="">Home</a></li>
-          <li><a href="">Projects</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about-me">About me</a></li>
+          <li><a href="#contact-me">Contact</a></li>
         </ul>
         <label for="nav-toggle" class="icon-burger">
           <div class="line"></div>
@@ -29,7 +32,7 @@
       <header>
         <div class="header-text">
           <div class="header-box">
-            <h2>Oleskii Saiko</h2>
+            <h2 class="main-name">Oleskii Saiko</h2>
           </div>
           <div class="desc-box">
             <p>Self-taught web developer from Ukraine</p>
@@ -258,7 +261,7 @@
           </div>
         </section>
         <section class="first-section">
-          <h1>Projects</h1>
+          <h1 id="projects">Projects</h1>
           <div class="projects-container">
             <div class="project">
               <div class="project-image-box">
@@ -319,10 +322,12 @@
             </div>
           </div>
         </section>
-        <section class="second-section">
-          <h1>Study platforms i use</h1>
+        <section class="header-second-section">
+          <h1 id="study">Study platforms i use</h1>
+        </section>
+        <div class="second-section">
           <div class="expirience-wrapper">
-            <div class="expirience-container-first">
+            <div class="expirience-container-first expirience-block">
               <div class="expirience-header">
                 <h2>The Odin Project</h2>
                 <img
@@ -335,7 +340,7 @@
                 backend.
               </p>
             </div>
-            <div class="expirience-container-second">
+            <div class="expirience-container-second expirience-block">
               <div class="expirience-header">
                 <h2>FreeCodeCamp</h2>
                 <img
@@ -345,7 +350,7 @@
               </div>
               <p>A place where I study certain aspects of JavaScript</p>
             </div>
-            <div class="expirience-container-third">
+            <div class="expirience-container-third expirience-block">
               <div class="expirience-header">
                 <h2>MDN Web Docs</h2>
                 <img src="./images/mdn.png" alt="MDN Web Docs Logo" />
@@ -357,7 +362,7 @@
                 about JavaScript, HTML and CSS
               </p>
             </div>
-            <div class="expirience-container-forth">
+            <div class="expirience-container-forth expirience-block">
               <h2>Work Expirience</h2>
               <p>
                 I still have no commercial work experience but I am always open
@@ -365,9 +370,9 @@
               </p>
             </div>
           </div>
-        </section>
+        </div>
         <section class="third-section">
-          <h1>About me</h1>
+          <h1 id="about-me">About me</h1>
           <p>
             I am a student who wants to know more. I am 22 years old. I have a
             bachelor's degree in energy engineering. I love mathematics and have
@@ -380,7 +385,7 @@
           </p>
         </section>
         <section class="fourth-section">
-          <h1>Contact me</h1>
+          <h1 id="contact-me">Contact me</h1>
           <div class="contact-wrapper">
             <div class="contact-left">
               <div class="contact-container">
@@ -389,7 +394,7 @@
               </div>
               <div class="contact-container">
                 <img src="./images/discord.png" alt="Discord icon" />
-                <p>Kartoshechka#3776</p>
+                <span>Kartoshechka#3776</span>
               </div>
               <div class="contact-container">
                 <img src="./images/linkedin.png" alt="Linkedin icon" />
@@ -398,15 +403,15 @@
             </div>
             <div class="contact-right">
               <div class="contact-container">
-                <a href="github.com/Kartohan">Kartohan</a>
+                <a href="https://github.com/Kartohan">Kartohan</a>
                 <img src="./images/github.png" alt="Github icon" />
               </div>
               <div class="contact-container">
-                <p>Kartohan@yandex.ru</p>
+                <span>Kartohan@yandex.ru</span>
                 <img src="./images/mail.png" alt="Email icon" />
               </div>
               <div class="contact-container">
-                <p>Ukraine</p>
+                <span>Ukraine</span>
                 <img src="./images/geo.png" alt="Geo icon" />
               </div>
             </div>

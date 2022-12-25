@@ -16,6 +16,45 @@ body {
 
 section {
   font-family: Ubuntu;
+  opacity: 0;
+}
+
+p {
+  font-family: "Montserrat";
+}
+
+.show {
+  animation: section-show 1s ease-in-out 1 forwards;
+}
+
+.show-block {
+  animation: block-show 1s ease-in-out 1 forwards;
+}
+
+.expirience-block {
+  opacity: 0;
+}
+
+@keyframes section-show {
+  from {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  to {
+    opacity: 100;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes block-show {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 100;
+    transform: translateX(0%);
+  }
 }
 
 /* Menu */
@@ -72,6 +111,23 @@ nav .icon-burger .line {
   margin: 5px;
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
+}
+
+.logo {
+  height: 100px;
+  align-items: center;
+  display: flex;
+}
+
+.logo img {
+  height: 50%;
+}
+
+.logo a {
+  background-image: url("./images/icon.png");
+  height: 50px;
+  width: 50px;
+  background-size: contain;
 }
 
 @media screen and (max-width: 768px) {
@@ -138,7 +194,6 @@ header {
   height: 100%;
   transform: translateY(100%);
   animation: header-pic 1s ease-in-out 0.5s 1 forwards;
-  /* border-radius: 100%; */
 }
 
 @keyframes header-pic {
@@ -153,22 +208,27 @@ header {
 .header-box,
 .desc-box {
   overflow: hidden;
+  position: relative;
 }
 
 .header-text p {
   font-size: 1.5rem;
-  font-family: Ubuntu;
+  font-family: "Montserrat";
   margin: 15px 0;
   transform: translateY(150%);
-  animation: header-desc 1s ease-in-out 2.5s 1 forwards;
+  animation: header-desc 1s ease-in-out 1.4s 1 forwards;
 }
 
 .header-text h2 {
   margin: 15px 0;
   font-size: 2rem;
   font-family: Ubuntu;
+  margin: 0;
+}
+
+.main-name {
   transform: translateY(-150%);
-  animation: header-name 1s ease-in-out 1.5s 1 forwards;
+  animation: header-name 1s ease-in-out 0.7s 1 forwards;
 }
 
 @keyframes header-name {
@@ -413,9 +473,10 @@ main h1 {
 
 .second-section {
   margin-bottom: 25px;
+  font-family: Ubuntu;
 }
 
-.second-section > h1 {
+.header-second-section > h1 {
   margin-bottom: 25px;
   text-align: center;
   font-size: 2rem;
@@ -483,7 +544,7 @@ main h1 {
 /* Third section */
 
 .third-section {
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .third-section > h1 {
@@ -500,7 +561,10 @@ main h1 {
 /* Contact */
 
 .fourth-section {
-  margin-bottom: 50px;
+  padding: 15px 15px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 .contact-wrapper {
@@ -554,6 +618,7 @@ main h1 {
   align-items: center;
   opacity: 0%;
   pointer-events: none;
+  z-index: 10;
   /* animation: back 0.5s ease-out 2.5s 1 forwards; */
 }
 
@@ -563,6 +628,7 @@ main h1 {
   font-size: 4em;
   padding: 0;
   margin: 0;
+  z-index: 11;
   /* animation: text 2s ease-out 0.5s 1 forwards; */
 }
 
