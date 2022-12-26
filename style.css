@@ -38,7 +38,7 @@ p {
 @keyframes section-show {
   from {
     opacity: 0;
-    transform: translateY(-30%);
+    transform: translateY(-10%);
   }
   to {
     opacity: 100;
@@ -68,12 +68,19 @@ p {
   align-items: center;
 }
 
+.menu-background {
+  position: absolute;
+  top: 1px;
+  background-color: white;
+}
+
 .menu-items {
   display: flex;
   align-items: center;
   gap: 2rem;
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 .menu-items li {
@@ -93,7 +100,7 @@ p {
   color: rgb(96, 96, 255);
 }
 
-#nav-toggle {
+/* #nav-toggle {
   position: absolute;
   top: -100px;
 }
@@ -111,7 +118,7 @@ nav .icon-burger .line {
   margin: 5px;
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
-}
+} */
 
 .logo {
   height: 100px;
@@ -130,52 +137,10 @@ nav .icon-burger .line {
   background-size: contain;
 }
 
-@media screen and (max-width: 768px) {
-  nav .logo {
-    float: none;
-    width: auto;
-    justify-content: center;
-  }
-  nav .menu-items {
-    float: none;
-    position: fixed;
-    z-index: 9;
-    left: 0;
-    right: 0;
-    top: 100px;
-    bottom: 100%;
-    width: auto;
-    height: auto;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: rgba(0, 0, 0, 0.8);
-    overflow: hidden;
-    box-sizing: border-box;
-    transition: all 0.5s ease-in-out;
-  }
-  nav .menu-items a {
-    font-size: 20px;
-  }
-  nav :checked ~ .menu-items {
-    bottom: 0;
-  }
-  nav .icon-burger {
-    display: block;
-  }
-  nav :checked ~ .icon-burger .line:nth-child(1) {
-    transform: translateY(10px) rotate(225deg);
-  }
-  nav :checked ~ .icon-burger .line:nth-child(3) {
-    transform: translateY(-10px) rotate(-225deg);
-  }
-  nav :checked ~ .icon-burger .line:nth-child(2) {
-    opacity: 0;
-  }
-}
-
 /* Header */
 
 header {
+  margin: 50px;
   height: 350px;
   display: flex;
   align-items: center;
@@ -407,11 +372,14 @@ main h1 {
 
 .project-img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project-image-box {
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 
 .project-image-box h1 {
@@ -419,6 +387,10 @@ main h1 {
   position: absolute;
   transition-duration: 0.7s;
   transition-timing-function: ease-in-out;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 0 15px;
+  backdrop-filter: blur(1px);
 }
 
 .project-desc-box {
@@ -428,12 +400,13 @@ main h1 {
   align-items: center;
   flex-direction: column;
   color: white;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   transform: translateY(0);
   height: 100%;
   transition-duration: 0.7s;
   transition-timing-function: ease-in-out;
+  padding: 5px;
 }
 
 .project-links {
@@ -462,7 +435,7 @@ main h1 {
 }
 
 .project:hover .project-header {
-  transform: translateY(-825%);
+  transform: translateY(-870%);
 }
 
 .project:hover .project-desc-box {
@@ -649,4 +622,74 @@ main h1 {
   100% {
     opacity: 0%;
   }
+}
+
+@media screen and (max-width: 768px) {
+  nav .logo {
+    float: none;
+    width: auto;
+    justify-content: center;
+  }
+  .menu {
+    justify-content: center;
+  }
+  header {
+    flex-direction: column-reverse;
+    margin: 50px 0;
+    gap: 50px;
+  }
+  .pic-container {
+    height: 170px;
+  }
+  .header-box h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .desc-box p {
+    font-size: 1.3rem;
+  }
+  .expirience-block {
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  /* nav .menu-items {
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+  } */
+  nav .menu-items a {
+    display: none;
+  }
+  .menu-items {
+    display: none;
+  }
+  /* nav :checked ~ .menu-items {
+    bottom: 0;
+  }
+  nav .icon-burger {
+    display: block;
+  }
+  nav :checked ~ .icon-burger .line:nth-child(1) {
+    transform: translateY(10px) rotate(225deg);
+  }
+  nav :checked ~ .icon-burger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+  }
+  nav :checked ~ .icon-burger .line:nth-child(2) {
+    opacity: 0;
+  } */
 }
