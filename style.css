@@ -1,8 +1,25 @@
+:root {
+  --color-bg: linear-gradient(19deg, #ffebea 0%, #ddd6f3 100%);
+  --color-bg-dark: linear-gradient(19deg, #536976, #292e49);
+  --color-text: #000000;
+  --link-color: rgb(77, 1, 255);
+  --border-color: #fff;
+}
+
+h1,
+a,
+ul li a,
+h2,
+p,
+span {
+  color: var(--color-text);
+}
+
 body {
   padding: 0;
   margin: 0;
   background-color: #ffebea;
-  background-image: linear-gradient(19deg, #ffebea 0%, #ddd6f3 100%);
+  background-image: var(--color-bg);
 }
 
 .container {
@@ -92,12 +109,11 @@ p {
   text-decoration: none;
   margin: 0;
   padding: 0;
-  color: black;
   transition-duration: 0.5s;
 }
 
 .menu-items a:hover {
-  color: rgb(96, 96, 255);
+  color: var(--link-color);
 }
 
 /* #nav-toggle {
@@ -240,16 +256,18 @@ main h1 {
 .tech-image {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   width: 50px;
   height: 50px;
   border-radius: 5px;
   padding: 5px;
-  border: 1px solid black;
+  border: 1px solid var(--border-color);
+  transition-duration: 0.5s;
 }
 
 .tech-image img {
   width: 100%;
+  object-fit: contain;
 }
 
 .tech-content {
@@ -266,9 +284,10 @@ main h1 {
   margin: 0;
   opacity: 0;
   font-family: Ubuntu;
-  font-size: 12px;
+  font-size: 17px;
   font-weight: bold;
   transition-duration: 0.7s;
+  color: black;
 }
 
 .tech-content::after {
@@ -288,6 +307,10 @@ main h1 {
 
 .tech-content:hover p {
   opacity: 100%;
+}
+
+.tech-content:hover .tech-image {
+  width: 100px;
 }
 
 .carousel {
@@ -320,18 +343,15 @@ main h1 {
   position: absolute;
   width: 100%;
   height: 100%;
-  /* background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(0, 0, 0, 0) 5%,
-    rgba(0, 0, 0, 0) 95%,
-    rgba(255, 255, 255, 1) 100%
-  ); */
   pointer-events: none;
 }
 
 .carousel-container:hover {
   animation-play-state: paused;
+}
+
+.tech-image:hover {
+  width: 100px;
 }
 
 @keyframes carousel {
@@ -367,13 +387,14 @@ main h1 {
   width: 300px;
   overflow: hidden;
   position: relative;
-  border: 1px solid black;
+  border: 1px solid var(--border-color);
 }
 
 .project-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition-duration: 0.7s;
 }
 
 .project-image-box {
@@ -383,6 +404,7 @@ main h1 {
 }
 
 .project-image-box h1 {
+  color: black !important;
   transform: translateY(-120%);
   position: absolute;
   transition-duration: 0.7s;
@@ -442,6 +464,10 @@ main h1 {
   transform: translateY(-100%);
 }
 
+.project:hover .project-img {
+  filter: blur(2px);
+}
+
 /* Section 2 */
 
 .second-section {
@@ -483,7 +509,7 @@ main h1 {
 
 .expirience-container-second,
 .expirience-container-forth {
-  border: 1px solid black;
+  border: 1px solid var(--border-color);
   display: inline-block;
   width: fit-content;
   align-self: flex-end;
@@ -492,7 +518,7 @@ main h1 {
 
 .expirience-container-first,
 .expirience-container-third {
-  border: 1px solid black;
+  border: 1px solid var(--border-color);
   display: inline-block;
   width: fit-content;
   padding: 35px;
@@ -535,9 +561,9 @@ main h1 {
 
 .fourth-section {
   padding: 15px 15px;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border-top: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
 }
 
 .contact-wrapper {
@@ -569,7 +595,7 @@ main h1 {
 }
 
 .contact-container a {
-  color: blue;
+  color: var(--link-color);
   text-decoration: none;
 }
 
@@ -579,38 +605,67 @@ main h1 {
   margin-bottom: 35px;
 }
 
+/* Section 3 */
+
+.third-section {
+  padding: 5px;
+}
+
+/* Color schemas */
+
+@media (prefers-color-scheme: dark) {
+  .logo a {
+    filter: invert(1);
+  }
+  :root {
+    --color-text: #ffeeee;
+    --color-bg: linear-gradient(19deg, #222222, #2a2a2a);
+    --link-color: rgb(179 185 255);
+    --border-color: #fff;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-text: #000000;
+    --link-color: rgb(77, 1, 255);
+    --color-bg: linear-gradient(19deg, #ffebea 0%, #ddd6f3 100%);
+    --border-color: rgb(0, 0, 0);
+  }
+}
 /* First animation */
 
 .ani {
-  background: white;
+  background: var(--color-bg);
   height: 100vh;
   width: 100%;
   display: flex;
   position: absolute;
   justify-content: center;
   align-items: center;
-  opacity: 0%;
+  opacity: 100%;
   pointer-events: none;
   z-index: 10;
-  /* animation: back 0.5s ease-out 2.5s 1 forwards; */
+  animation: back 0.5s ease-out 2.5s 1 forwards;
 }
 
 .a-text {
-  color: white;
+  color: var(--color-text);
   font-family: Ubuntu;
   font-size: 4em;
   padding: 0;
+  opacity: 0;
   margin: 0;
   z-index: 11;
-  /* animation: text 2s ease-out 0.5s 1 forwards; */
+  animation: text 2s ease-out 0.5s 1 forwards;
 }
 
 @keyframes text {
   0% {
-    color: white;
+    opacity: 0;
   }
   100% {
-    color: black;
+    opacity: 100%;
     transform: scale(1.2);
   }
 }
@@ -650,7 +705,7 @@ main h1 {
   }
   .expirience-block {
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--border-color);
     width: 100%;
     box-sizing: border-box;
   }
