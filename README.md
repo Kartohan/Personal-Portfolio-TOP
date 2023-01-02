@@ -24,4 +24,4 @@ What can be done in the future:
 If anyone has any suggestions or advice, or maybe someone will catch bug, I'd be happy to chat on Discord. My Discord Kartoshechka#3776
 
 Preview!
-[screencapture-127-0-0-1-5500-index-html-2023-01-02-14_00_41](https://user-images.githubusercontent.com/99285514/210228566-97e981b6-7ace-4466-ad1a-c85179845be0.png)
+![screencapture-127-0-0-1-5500-index-html-2023-01-02-14_00_41](https://user-images.githubusercontent.com/99285514/210228658-e1d34831-a7e2-43be-baff-22347c42b634.png)
