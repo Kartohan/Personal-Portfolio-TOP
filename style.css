@@ -406,6 +406,11 @@ main h1 {
   padding: 5px;
 }
 
+.project-desc-text {
+  color: white !important;
+  font-weight: 600;
+}
+
 .project-links {
   display: flex;
   gap: 15px;
@@ -606,6 +611,15 @@ main h1 {
     --link-color: rgb(77, 1, 255);
     --color-bg: linear-gradient(19deg, #ffebea 0%, #ddd6f3 100%);
     --border-color: rgb(0, 0, 0);
+  }
+  p {
+    font-weight: 600;
+  }
+  .tech-content::after {
+    background-color: black;
+  }
+  .carousel-text {
+    color: white !important;
   }
 }
 
